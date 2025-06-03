@@ -3,32 +3,32 @@ export const audioContent = {
     17: {
       title: "Postpartum Adaptations and Nursing Care",
       audioFile: "/audio/chapter17-summary.mp3",
-      transcript: "This chapter covers the physiological and psychological adaptations that occur during the postpartum period..."
+      transcriptFile: "/transcripts/chapter17-transcript.txt"
     },
     20: {
       title: "Normal Newborn Processes of Adaptation", 
       audioFile: "/audio/chapter20-summary.mp3",
-      transcript: "Understanding how newborns transition from intrauterine to extrauterine life..."
+      transcriptFile: "/transcripts/chapter20-transcript.txt"
     },
     21: {
       title: "Assessment of the Normal Newborn",
-      audioFile: "/audio/chapter21-summary.mp3", 
-      transcript: "Systematic assessment techniques for evaluating newborn health and development..."
+      audioFile: "/audio/chapter21-summary.mp3",
+      transcriptFile: "/transcripts/chapter21-transcript.txt"
     },
     22: {
       title: "Care of the Normal Newborn",
       audioFile: "/audio/chapter22-summary.mp3",
-      transcript: "Essential nursing care priorities for the newborn in the immediate postpartum period..."
+      transcriptFile: "/transcripts/chapter22-transcript.txt"
     },
     23: {
       title: "Infant Feeding",
       audioFile: "/audio/chapter23-summary.mp3",
-      transcript: "Comprehensive overview of breastfeeding, formula feeding, and common feeding challenges..."
+      transcriptFile: "/transcripts/chapter23-transcript.txt"
     },
     26: {
       title: "Family Planning", 
       audioFile: "/audio/chapter26-summary.mp3",
-      transcript: "Contraceptive methods, effectiveness, and patient counseling strategies..."
+      transcriptFile: "/transcripts/chapter26-transcript.txt"
     }
   }
 };

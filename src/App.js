@@ -1,3 +1,4 @@
+import { audioContent } from "./data/audioContent";
 import React, { useState } from "react";
 import PregnancyTimeline from "./components/PregnancyTimeline";
 import DueDateCalculator from "./components/DueDateCalculator";
@@ -368,7 +369,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/part2-intro.mp3"
                   title="Part 2 Introduction Audio Summary"
-                  transcript="Welcome to Part 2 of the learning platform, focusing on postpartum maternal care and newborn assessment and care..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <div className="mb-6">
@@ -397,7 +398,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter17-summary.mp3"
                   title="Chapter 17: Postpartum Adaptations"
-                  transcript="This chapter covers physiological and psychological adaptations during the postpartum period..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <PostpartumAssessment />
@@ -415,7 +416,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter20-summary.mp3"
                   title="Chapter 20: Newborn Adaptation"
-                  transcript="Understanding how newborns transition from intrauterine to extrauterine life..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <NewbornTransitionSimulator />
@@ -431,7 +432,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter21-summary.mp3"
                   title="Chapter 21: Newborn Assessment"
-                  transcript="Systematic assessment techniques for evaluating newborn health..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <APGARCalculator />
@@ -448,7 +449,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter22-summary.mp3"
                   title="Chapter 22: Newborn Care"
-                  transcript="Essential nursing care priorities for newborns..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <NewbornCareProtocols />
@@ -464,7 +465,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter23-summary.mp3"
                   title="Chapter 23: Infant Feeding"
-                  transcript="Comprehensive overview of feeding methods and challenges..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <LactationStagesExplorer />
@@ -482,7 +483,7 @@ function App() {
                 <AudioPlayer 
                   audioFile="/audio/chapter26-summary.mp3"
                   title="Chapter 26: Family Planning"
-                  transcript="Contraceptive methods and patient counseling..."
+                  transcriptFile={audioContent.chapters[17].transcriptFile}
                 />
 
                 <ContraceptionSelector />
