@@ -312,7 +312,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter17-summary.mp3"
+                  audioFile="audio/chapter17-summary.mp3"
                   title="Chapter 17: Postpartum Adaptations"
                   transcript="This chapter covers physiological and psychological adaptations during the postpartum period..."
                 />
@@ -330,7 +330,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter20-summary.mp3"
+                  audioFile="audio/chapter20-summary.mp3"
                   title="Chapter 20: Newborn Adaptation"
                   transcript="Understanding how newborns transition from intrauterine to extrauterine life..."
                 />
@@ -346,7 +346,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter21-summary.mp3"
+                  audioFile="audio/chapter21-summary.mp3"
                   title="Chapter 21: Newborn Assessment"
                   transcript="Systematic assessment techniques for evaluating newborn health..."
                 />
@@ -363,7 +363,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter22-summary.mp3"
+                  audioFile="audio/chapter22-summary.mp3"
                   title="Chapter 22: Newborn Care"
                   transcript="Essential nursing care priorities for newborns..."
                 />
@@ -379,7 +379,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter23-summary.mp3"
+                  audioFile="audio/chapter23-summary.mp3"
                   title="Chapter 23: Infant Feeding"
                   transcript="Comprehensive overview of feeding methods and challenges..."
                 />
@@ -397,7 +397,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="/audio/chapter26-summary.mp3"
+                  audioFile="audio/chapter26-summary.mp3"
                   title="Chapter 26: Family Planning"
                   transcript="Contraceptive methods and patient counseling..."
                 />
