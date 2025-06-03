@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pregnancylms_2/static/css/main.87790096.css",
+    "main.js": "/pregnancylms_2/static/js/main.8f8a06e9.js",
+    "index.html": "/pregnancylms_2/index.html",
+    "main.87790096.css.map": "/pregnancylms_2/static/css/main.87790096.css.map",
+    "main.8f8a06e9.js.map": "/pregnancylms_2/static/js/main.8f8a06e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87790096.css",
+    "static/js/main.8f8a06e9.js"
+  ]
+}
