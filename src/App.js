@@ -145,7 +145,7 @@ function App() {
             </button>
 
             <div className="text-lg font-bold text-indigo-700">
-              Part {currentPart} - Module {currentModuleIndex + 1} of {modules.length}: {modules[currentModuleIndex].name}
+              Part {currentPart} - Module {currentModuleIndex + 1} of {modules.length}: {modules[currentModuleIndex]?.name}
             </div>
 
             <button
@@ -223,15 +223,131 @@ function App() {
               </div>
             )}
 
-            {activeModule === "womenshealth" && <WomensHealthAssessment />}
-            {activeModule === "basics" && <DueDateCalculator />}
-            {activeModule === "gtpal" && <GTPALCalculator />}
-            {activeModule === "signs" && <PregnancySignsQuiz />}
-            {activeModule === "timeline" && <PregnancyTimeline />}
-            {activeModule === "bodychanges" && <PregnancyBodyChangesSimulator />}
-            {activeModule === "complications" && <TeratogenExplorer />}
-            {activeModule === "labor" && <LaborSimulation />}
-            {activeModule === "finalexam" && <FinalExam onComplete={handleExamCompletion} />}
+            {activeModule === "womenshealth" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Women's Health Assessment
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 2 of {modules.length}
+                  </span>
+                </div>
+                <WomensHealthAssessment />
+              </div>
+            )}
+
+            {activeModule === "basics" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Conception & Pregnancy Dating
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 3 of {modules.length}
+                  </span>
+                </div>
+                <DueDateCalculator />
+              </div>
+            )}
+
+            {activeModule === "gtpal" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    GTPAL System
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 4 of {modules.length}
+                  </span>
+                </div>
+                <GTPALCalculator />
+              </div>
+            )}
+
+            {activeModule === "signs" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Pregnancy Signs
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 5 of {modules.length}
+                  </span>
+                </div>
+                <PregnancySignsQuiz />
+              </div>
+            )}
+
+            {activeModule === "timeline" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Pregnancy Timeline
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 6 of {modules.length}
+                  </span>
+                </div>
+                <PregnancyTimeline />
+              </div>
+            )}
+
+            {activeModule === "bodychanges" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Body Changes
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 7 of {modules.length}
+                  </span>
+                </div>
+                <PregnancyBodyChangesSimulator />
+              </div>
+            )}
+
+            {activeModule === "complications" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Pregnancy Complications
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 8 of {modules.length}
+                  </span>
+                </div>
+                <TeratogenExplorer />
+              </div>
+            )}
+
+            {activeModule === "labor" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Labor & Birth
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 9 of {modules.length}
+                  </span>
+                </div>
+                <LaborSimulation />
+              </div>
+            )}
+
+            {activeModule === "finalexam" && (
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
+                  <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-2 sm:mb-0">
+                    Final Exam Part 1
+                  </h2>
+                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Module 10 of {modules.length}
+                  </span>
+                </div>
+                <FinalExam onComplete={handleExamCompletion} />
+              </div>
+            )}
           </>
         )}
 
@@ -259,39 +375,6 @@ function App() {
                   <p className="text-gray-700 mb-3">
                     Welcome to Part 2! This section covers the critical postpartum period and comprehensive newborn care.
                   </p>
-                  <p className="text-gray-700 mb-3">
-                    You'll learn postpartum assessment, newborn adaptation, feeding, and family planning.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
-                  <div className="bg-white border rounded-lg overflow-hidden">
-                    <div className="bg-indigo-600 text-white px-4 py-2">Part 2 Learning Objectives</div>
-                    <div className="p-4">
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Master postpartum assessment techniques</li>
-                        <li>Understand newborn transition and adaptation</li>
-                        <li>Perform systematic newborn assessments</li>
-                        <li>Provide evidence-based newborn care</li>
-                        <li>Support successful infant feeding</li>
-                        <li>Counsel on family planning methods</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="bg-white border rounded-lg overflow-hidden">
-                    <div className="bg-indigo-600 text-white px-4 py-2">Interactive Features</div>
-                    <div className="p-4">
-                      <ul className="list-disc list-inside space-y-2 text-gray-700">
-                        <li>APGAR score calculator</li>
-                        <li>Postpartum assessment tools</li>
-                        <li>Newborn care protocols</li>
-                        <li>Lactation stages explorer</li>
-                        <li>Contraception selector</li>
-                        <li>Audio chapter summaries</li>
-                      </ul>
-                    </div>
-                  </div>
                 </div>
 
                 <div className="flex justify-center">
@@ -312,7 +395,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter17-summary.mp3"
+                  audioFile="/audio/chapter17-summary.mp3"
                   title="Chapter 17: Postpartum Adaptations"
                   transcript="This chapter covers physiological and psychological adaptations during the postpartum period..."
                 />
@@ -330,7 +413,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter20-summary.mp3"
+                  audioFile="/audio/chapter20-summary.mp3"
                   title="Chapter 20: Newborn Adaptation"
                   transcript="Understanding how newborns transition from intrauterine to extrauterine life..."
                 />
@@ -346,7 +429,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter21-summary.mp3"
+                  audioFile="/audio/chapter21-summary.mp3"
                   title="Chapter 21: Newborn Assessment"
                   transcript="Systematic assessment techniques for evaluating newborn health..."
                 />
@@ -358,12 +441,12 @@ function App() {
 
             {activeModule === "newborncare" && (
               <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
-                <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-4">
+                <h2 className="text-xl sm:text-2xl font-bold text-indigo-707 mb-4">
                   Newborn Care Protocols
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter22-summary.mp3"
+                  audioFile="/audio/chapter22-summary.mp3"
                   title="Chapter 22: Newborn Care"
                   transcript="Essential nursing care priorities for newborns..."
                 />
@@ -379,7 +462,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter23-summary.mp3"
+                  audioFile="/audio/chapter23-summary.mp3"
                   title="Chapter 23: Infant Feeding"
                   transcript="Comprehensive overview of feeding methods and challenges..."
                 />
@@ -397,7 +480,7 @@ function App() {
                 </h2>
                 
                 <AudioPlayer 
-                  audioFile="audio/chapter26-summary.mp3"
+                  audioFile="/audio/chapter26-summary.mp3"
                   title="Chapter 26: Family Planning"
                   transcript="Contraceptive methods and patient counseling..."
                 />
