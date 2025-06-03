@@ -95,7 +95,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
     const seconds = timeInSeconds % 60;
 
-    return ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')};
+    return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 
   };
 
@@ -757,7 +757,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
       id: "P2-28",
 
-      question: "A postpartum woman reports seeing "spots" and having a headache. What is the priority assessment?",
+      question: "A postpartum woman reports seeing \"spots\" and having a headache. What is the priority assessment?",
 
       options: [
 
@@ -5247,7 +5247,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
                 className="h-full bg-gradient-to-r from-indigo-500 to-purple-600"
 
-                style={{ width: ${(examState.score / 50) * 100}% }}
+                style={{ width: `${(examState.score / 50) * 100}%` }}
 
               ></div>
 
@@ -5465,7 +5465,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
             className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 transition-all"
 
-            style={{ width: ${calculateProgress()}% }}
+            style={{ width: `${calculateProgress()}%` }}
 
           ></div>
 
@@ -5643,7 +5643,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
             ? "Submit All Answers"
 
-            : Submit (${Object.keys(examState.userAnswers).length}/${currentQuestions.length} Answered)}
+            : ```Submit (${Object.keys(examState.userAnswers).length}/${currentQuestions.length} Answered)`}
 
         </button>
 

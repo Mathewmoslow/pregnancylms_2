@@ -301,7 +301,7 @@ function App() {
 
               <div
 
-                style={{ width: ${getProgressPercentage()}% }}
+                style={{ width: `${getProgressPercentage()}%` }}
 
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-500"
 
