@@ -5643,7 +5643,7 @@ const FinalExamPart2 = ({ onComplete }) => {
 
             ? "Submit All Answers"
 
-            : ```Submit (${Object.keys(examState.userAnswers).length}/${currentQuestions.length} Answered)`}
+            : `Submit (${Object.keys(examState.userAnswers).length}/${currentQuestions.length} Answered)`}
 
         </button>
 
