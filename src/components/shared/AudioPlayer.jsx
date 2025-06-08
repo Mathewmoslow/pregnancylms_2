@@ -9,7 +9,7 @@ const AudioPlayer = ({ audioFile, transcriptFile, title }) => {
   useEffect(() => {
     if (transcriptFile && showTranscript && !transcript) {
       setLoading(true);
-      fetch(transcriptFile)
+      fetch(process.env.PUBLIC_URL + transcriptFile)
         .then(response => response.text())
         .then(text => {
           setTranscript(text);
@@ -34,7 +34,7 @@ const AudioPlayer = ({ audioFile, transcriptFile, title }) => {
 
   return (
     <div className="mb-4">
-      <audio id={`audio-${title}`} src={audioFile} onEnded={() => setIsPlaying(false)} />
+      <audio id={`audio-${title}`} src={process.env.PUBLIC_URL + audioFile} onEnded={() => setIsPlaying(false)} />
       
       <div className="flex items-center gap-3 mb-3">
         <button
