@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Introduction from "./components/Introduction";
+import CourseLanding from "./components/CourseLanding";
 import WomensHealthOverview from "./components/WomensHealthOverview";
 import PregnancyBasics from "./components/PregnancyBasics";
 import GTPALSystem from "./components/GTPALSystem";
@@ -38,7 +39,7 @@ import MethodEffectivenessChart from "./components/familyplanning/MethodEffectiv
 import AudioPlayer from "./components/shared/AudioPlayer";
 
 function App() {
-  const [activeModule, setActiveModule] = useState("intro");
+  const [activeModule, setActiveModule] = useState("landing");
   const [completedModules, setCompletedModules] = useState([]);
   const [currentPart, setCurrentPart] = useState(1);
   const [part1ExamResults, setPart1ExamResults] = useState(null);
@@ -46,6 +47,7 @@ function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const part1Modules = [
+    { id: "landing", name: "Course Overview", short: "Overview" },
     { id: "intro", name: "Introduction", short: "Intro" },
     { id: "womenshealth", name: "Women's Health", short: "Women's Health" },
     { id: "basics", name: "Conception & Dating", short: "Conception" },
@@ -110,7 +112,7 @@ function App() {
 
   const switchToPart1 = () => {
     setCurrentPart(1);
-    setActiveModule("intro");
+    setActiveModule("landing");
     setSidebarOpen(false);
   };
 
@@ -314,6 +316,9 @@ function App() {
             {/* Part 1 Modules */}
             {currentPart === 1 && (
               <>
+                {activeModule === "landing" && (
+                  <CourseLanding navigateToModule={navigateToModule} />
+                )}
                 {activeModule === "intro" && (
                   <div className="bg-white rounded-lg shadow-md p-4 sm:p-5 md:p-6 mb-6">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 mb-4">
@@ -321,7 +326,7 @@ function App() {
                         Pregnancy & Birth Learning Module
                       </h2>
                       <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
-                        Part 1 - Module 1 of {part1Modules.length}
+                        Part {currentPart} - Module {currentModuleIndex + 1} of {modules.length}
                       </span>
                     </div>
 
@@ -500,7 +505,7 @@ function App() {
                         Postpartum & Newborn Care
                       </h2>
                       <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
-                        Part 2 - Module 1 of {part2Modules.length}
+                        Part {currentPart} - Module {currentModuleIndex + 1} of {modules.length}
                       </span>
                     </div>
 
